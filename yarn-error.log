@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/conorheena/.nvm/versions/node/v12.14.0/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add express mongodb mongoose validator
+
+PATH: 
+  /Users/conorheena/.nvm/versions/node/v12.14.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/conorheena/Desktop/personal_projects/express-rest-api/package.json: Unexpected token { in JSON at position 126
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "express-rest-api",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Conor Heena",
+    "license": "MIT"
+  }
+  
+  
+  {
+    "name": "task-manager",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node src/index.js",
+      "dev": "nodemon src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.16.4",
+      "mongodb": "^3.1.10",
+      "mongoose": "^5.3.16",
+      "validator": "^10.9.0"
+    },
+    "devDependencies": {
+      "nodemon": "^1.18.9"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
