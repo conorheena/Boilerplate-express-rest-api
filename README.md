@@ -3,4 +3,4 @@
 Express rest api with:
 
 * Authentication
-* unit test
+* Jest unit tests
