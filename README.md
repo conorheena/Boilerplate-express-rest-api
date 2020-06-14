@@ -2,7 +2,7 @@
 
 Express rest api with:
 
-* Authentication
+* JWT authentication
 * Jest unit tests
 
 # How to use
