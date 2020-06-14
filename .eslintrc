@@ -77,7 +77,6 @@
     "no-var": 2,
     "no-useless-return": 2,
     "no-useless-rename": 2,
-    "no-use-before-define": 2,
     "no-duplicate-imports": 2,
     "arrow-parens": 2,
     "arrow-spacing": 2,
