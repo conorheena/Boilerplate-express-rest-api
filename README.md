@@ -2,6 +2,8 @@
 
 Express rest api with:
 
+* ESlint and prettier config
+* Connection to mongoDB 
 * JWT authentication
 * Jest unit tests
 
