@@ -15,7 +15,6 @@ router.post('/users', async (req, res) => {
   }
 });
 
-// authenticated user can get their own profile
 router.get('/users/me', auth, (req, res) => {
   res.send(req.user);
 });
@@ -59,14 +58,6 @@ router.post('/users/logoutAll', auth, async (req, res) => {
     res.send('all tokens deleted');
   } catch (e) {
     req.status(500).send();
-  }
-});
-
-router.post('/users/register', (req, res) => {
-  try {
-    res.send('hit register route');
-  } catch (e) {
-    res.status(500).send();
   }
 });
 
