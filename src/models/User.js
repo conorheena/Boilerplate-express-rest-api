@@ -32,12 +32,14 @@ const userSchema = new mongoose.Schema({
       }
     },
   },
-  tokens: [{
-    token: {
-      type: String,
-      required: true
-    }
-  }]
+  tokens: [
+    {
+      token: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 userSchema.pre('save', async function (next) {
@@ -52,12 +54,17 @@ userSchema.pre('save', async function (next) {
 
 userSchema.methods.generateAuthToken = function () {
   const user = this;
-
   const token = jwt.sign({ _id: user._id.toString() }, 'test string');
-
   user.tokens = user.tokens.concat({ token });
-
   return token;
+};
+
+userSchema.methods.toJSON = function () {
+  const user = this;
+  const userObject = user.toObject();
+  delete userObject.password;
+  delete userObject.tokens;
+  return userObject;
 };
 
 userSchema.statics.findByCredentials = async (email, password) => {
