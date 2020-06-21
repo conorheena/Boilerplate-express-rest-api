@@ -10,4 +10,4 @@ Express rest api with:
 * Jest unit tests
 
 # How to use
-run `yarn dev` to start the app locally
+run `yarn dev` in command line to start the app locally
