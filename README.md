@@ -4,9 +4,9 @@
 
 Express rest api with:
 
-- [ ] ESlint and prettier config
-- [ ] Connection to mongoDB
-- [ ] JWT authentication
+- [x] ESlint and prettier config
+- [x] Connection to mongoDB
+- [x] JWT authentication
 - [ ] Jest unit tests
 - [ ] CI pipeline with github actions
 
