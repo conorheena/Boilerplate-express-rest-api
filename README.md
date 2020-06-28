@@ -11,4 +11,4 @@ Express rest api with:
 - [ ] CI pipeline with github actions
 
 # How to use
-run `yarn dev` in command line to start the app locally
+run `yarn dev` to start the app locally
