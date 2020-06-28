@@ -48,7 +48,7 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-// remove all a users tasks from database when they delete their account
+// remove all a user's tasks from database when they delete their account
 userSchema.pre('remove', async function (next) {
   const user = this;
 
@@ -59,7 +59,7 @@ userSchema.pre('remove', async function (next) {
 
 userSchema.methods.generateAuthToken = function () {
   const user = this;
-  const token = jwt.sign({ _id: user._id.toString() }, 'test string');
+  const token = jwt.sign({ _id: user._id.toString() }, process.env.JWT_SECRET);
   user.tokens = user.tokens.concat({ token });
   return token;
 };
