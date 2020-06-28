@@ -26,11 +26,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 7,
     trim: true,
-    validate(value) {
-      if (value.toLowerCase().includes('password')) {
-        throw new Error('Password cannot contain "password"');
-      }
-    },
   },
   tokens: [
     {
@@ -72,7 +67,7 @@ userSchema.methods.toJSON = function () {
 userSchema.virtual('tasks', {
   ref: 'Tasks',
   localField: '_id',
-  foreignField: 'owner'
+  foreignField: 'owner',
 });
 
 userSchema.statics.findByCredentials = async (email, password) => {
