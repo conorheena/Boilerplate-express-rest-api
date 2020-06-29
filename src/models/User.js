@@ -38,6 +38,7 @@ const userSchema = new mongoose.Schema({
   ],
 });
 
+// encrypt user's password before user object is saved
 userSchema.pre('save', async function (next) {
   const user = this;
 
@@ -64,6 +65,7 @@ userSchema.methods.generateAuthToken = function () {
   return token;
 };
 
+// remove sensitive data when sending user object back
 userSchema.methods.toJSON = function () {
   const user = this;
   const userObject = user.toObject();
